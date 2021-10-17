@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body{
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+  /* font-size:1.5vw; */
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #ffba74;
+  transition: all .5s ease;
+}
+
+.sidebar header {
+  font-size: 22px;
+  padding-right: 20px;
+  color: rgb(63, 23, 0);
+  text-align: center;
+  line-height: 70px;
+  background: #fc8f41;
+  user-select: none;
+}
+
+.sidebar ol a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: rgb(100, 41, 2);
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-top: 6px solid rgba(255, 136, 0, 0.1);
+  border-bottom: 2px solid rgb(46, 22, 1);
+  transition: .4s;
+}
+ol li:hover a{
+  padding-left: 70px;
+}
+
+.sideabr ol a i {
+  margin-right: 16px;
+}
+
+#check{
+  display: none;
+}
+ 
+label #btn,label #cancel{
+  position: absolute;
+  cursor: pointer;
+  background: rgb(53, 52, 52);
+  border-radius: 3px;
+}
+
+label #btn{
+  left: 40px;
+  top: 65px;
+  font-size: 20px;
+  color: white;
+  padding: 4px 8px;
+  transition: all .5s;
+}
+
+label #cancel{
+  z-index: 1111;
+  left: -195px;
+  top: 20px;
+  font-size: 22px;
+  color: #ff4006;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+
+#check:checked ~ .sidebar{
+  left: 0;
+}
+
+#check:checked ~ label #btn{
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#check:checked ~ label #cancel{
+  left: 195px;
+}
+
+#check:checked ~ section{
+  margin-left: 200px;
+}
+
+#check:checked ~ .title{
+  margin-left: 200px;
+}
+
+#check:checked ~ .icons{
+  margin-left: 100px;
+}
+
+section{
+  background: url(logo.jpeg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  background-size: 150px 150px;
+  background-position: 150px 0px;
+  transition: all .5s ease;
+}
+.title {
+  font-family: myFirstFont;
+  font-style: oblique;
+  font-weight: 900;
+  color: #DAA520;
+  font-size: 2em;
+  font-variant-caps: petite-caps;
+  position: absolute;
+  top: 40px;
+  left: 500px;
+  text-align: justify;
+  transition: all .5s ease;
+  text-align: center;
+  cursor: pointer;
+  transition: .5s;
+}
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: 40px;
+  left: 1050px;
+  transition: all .5s ease;
+}
+.icons ul a{
+  color: #000;
+}
+ul{
+  display: flex;
+}
+
+ul li{
+  position: realtive;
+  display: block;
+  color: #000;
+  font-size: 30px;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: .5s;
+}
+
+ul li:before{
+  content: '';
+  top: 0;
+  left: 0;
+  background: #d35400;
+  height: inherit;
+  width: inherit;
+  z-index: -1;
+  transform : scale(0.9);
+  transition: .5s;
+}
+ul li:nth-child(1):before{
+  background: #0055ff;
+}
+
+ul li:nth-child(2):before{
+  background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+}
+
+ul li:hover:before{
+  filter: blur(3px);
+  transform: scale(1.2);
+}
+
+ul li:nth-child(1):hover:before{
+  box-shadow: 0 0 15px #0055ff;
+}
+
+ul li:nth-child(2):hover:before{
+  box-shadow: 0 0 15px #fd1d1d;
+}
+
+ul li:nth-child(1):hover {
+  color: #03215c;
+  box-shadow: 0 0 15px #0055ff;
+  text-shadow: 0 0 15px #0055ff;
+}
+
+ul li:nth-child(2):hover {
+  color: #570000;
+  box-shadow: 0 0 15px #fd1d1d;
+  text-shadow: 0 0 15px #fd1d1d;
+}
+
+p:hover{
+  color: #664a01;
+  text-shadow: 0 0 15px #fab300;
+}
+
+/* Responsive Design for medium mobiles */
+@media screen and (min-width: 360px) and (max-width: 767px){
+  .sidebar{
+  width: 150px;
+  }
+  .sidebar header{
+    padding-right: 40px;
+  }
+  .sidebar ol a{
+    padding-left: 20px;
+  }
+  ol li:hover a{
+    padding-left: 20px;
+  }
+  #check:checked ~ label #btn{
+    left: 120px;
+  }
+  #check:checked ~ label #cancel{
+    left: 100px;
+  }
+  #check:checked ~ section{
+    margin-left: 20px;
+  }
+  #check:checked ~ .title{
+    margin-left: 20px;
+  }
+  #check:checked ~ .icons{
+    margin-left: 20px;
+  }
+  .title{
+  width: 50%;
+  top: 200px;
+  left: 140px;
+  }
+  ul{
+    display: flex;
+    flex-direction: column;
+  }
+  .icons {
+    top: 350px;
+    left: 130px;
+  }
+  ul li:nth-child(1){
+    margin-left: 60px;
+  }
+  ul li:nth-child(2){
+    margin-top: 20px;
+    margin-left: 60px;
+  }
+}

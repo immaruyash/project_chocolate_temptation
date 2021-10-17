@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+    <title>Contact</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+            text-decoration: none;
+        } 
+        body{
+            background-color: #ffffff;
+            background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+        }
+        .instagram{
+            border-style: solid;
+            width: 30%;
+            border-radius: 5px;
+            float: left;
+            padding: 15px;
+            margin: 20px;
+            height: 300px;
+        }
+        .container{
+            border-style: solid;
+            width: 30%;
+            border-radius: 5px;
+            float: left;
+            padding: 70px;
+            margin: 20px;
+            height: 300px;
+            position: relative;
+            justify-content: center;
+            text-align: center;
+        }
+        .whatsapp{
+            border-style: solid;
+            width: 30%;
+            border-radius: 5px;
+            float: right;
+            padding: 15px;
+            margin: 20px;
+            height: 300px;
+        }
+        p{
+            text-align: center;
+            padding-top: 10px;
+            text-transform: capitalize;
+            font-family: 'Caveat';
+            font-style: oblique;
+            font-weight: bold;
+            font-size: 40px;
+            color: #130168;
+            font-variant-caps: petite-caps;
+        }
+        p:hover{
+            color: #2600e2;
+            text-shadow: 0 0 15px #ff0000;
+        }
+        .icons ol a{
+            color: #000;
+        }
+        ol{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding: 25px;
+            margin-top: 30px;
+
+        }
+        ol li{
+            position: realtive;
+            display: block;
+            color: #000;
+            font-size: 30px;
+            height: 60px;
+            width: 60px;
+            line-height: 60px;
+            border-radius: 50%;
+            margin: -30px 15px;
+            cursor: pointer;
+            transition: .5s;
+        }
+        ol li:before{
+            content: '';
+            top: 0;
+            left: 0;
+            background: #d35400;
+            height: inherit;
+            width: inherit;
+            z-index: -1;
+            transform : scale(1.9);
+            transition: .5s;
+        }
+        ol li:nth-child(1):before{
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+        }
+        ol li:hover:before{
+            filter: blur(3px);
+            transform: scale(1.2);
+        }
+        ol li:nth-child(1):hover:before{
+            box-shadow: 0 0 15px #fd1d1d;
+        }
+        ol li:nth-child(1):hover {
+
+            color: #570000;
+            box-shadow: 0 0 15px #fd1d1d;
+            text-shadow: 0 0 15px #fd1d1d;
+        }
+
+        .icons ul a{
+            color: #000;
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 17px 0 20px 0;
+            text-align: center;
+            position: relative;
+            padding: 25px;         
+        }
+        ul li{
+            position: realtive;
+            display: block;
+            color: #000;
+            font-size: 25px;
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            margin: -20px 15px;
+            cursor: pointer;
+            transition: .5s;
+        }
+        ul li:before{
+            content: '';
+            top: 0;
+            left: 0;
+            background: #d35400;
+            height: inherit;
+            width: inherit;
+            z-index: -1;
+            transform : scale(1.9);
+            transition: .5s;
+        }
+        ul li:nth-child(1):before{
+            background: #006400;
+        }
+        ul li:nth-child(2):before{
+            background: #006400;
+        }
+        ul li:nth-child(3):before{
+            background: #006400;
+        }
+        ul li:hover:before{
+            filter: blur(3px);
+            transform: scale(1.2);
+        }
+        ul li:nth-child(1):hover:before{
+            box-shadow: 0 0 15px #006400;
+        }
+        ul li:nth-child(2):hover:before{
+            box-shadow: 0 0 15px #006400;
+        }
+        ul li:nth-child(1):hover:before{
+            box-shadow: 0 0 15px #006400;
+        }
+        ul li:nth-child(1):hover {
+            color: #7CFC00;
+            box-shadow: 0 0 15px #006400;
+            text-shadow: 0 0 15px #006400;
+        }
+        ul li:nth-child(2):hover {
+            color: #7CFC00;
+            box-shadow: 0 0 15px #006400;
+            text-shadow: 0 0 15px #006400;
+        }
+        ul li:nth-child(3):hover {
+            color: #7CFC00;
+            box-shadow: 0 0 15px #006400;
+            text-shadow: 0 0 15px #006400;
+        }
+        
+        ul li:nth-child(1) .text1{
+            visibility: hidden;
+            width: 150px;
+            background-color: #006400;
+            color: #7CFC00;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            font-size: large;
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+            top: 105%;
+            left: 25%;
+            margin-left: -60px;
+            /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        ul li:nth-child(1):hover .text1{
+            visibility: visible;
+            opacity: 1;
+        }
+        ul li:nth-child(2) .text2{
+            visibility: hidden;
+            width: 150px;
+            background-color: #006400;
+            color: #7CFC00;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            font-size: large;
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+            top: 105%;
+            left: 30%;
+            /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        ul li:nth-child(2):hover .text2{
+            visibility: visible;
+            opacity: 1;
+
+        }
+
+        ul li:nth-child(3) .text3{
+            visibility: hidden;
+            width: 150px;
+            background-color: #006400;
+            color: #7CFC00;
+            text-align: center;
+            font-size: large;
+            border-radius: 6px;
+            padding: 5px 0;
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+            top: 105%;
+            left: 52%;
+            /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        ul li:nth-child(3):hover .text3{
+            visibility: visible;
+            opacity: 1;
+        }
+        .text{
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+            text-transform: capitalize;
+            font-family: 'Caveat';
+            font-style: oblique;
+            font-weight: bold;
+            font-size: 40px;
+            color: #130168;
+            font-variant-caps: petite-caps;
+        }
+        .top{
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+            text-transform: capitalize;
+            font-family: 'Caveat';
+            font-style: oblique;
+            font-weight: bold;
+            font-size: 25px;
+            font-variant-caps: petite-caps;
+            color: #130168;
+        }
+        .bottom{
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+            text-transform: capitalize;
+            font-family: 'Caveat';
+            font-style: oblique;
+            font-weight: bold;
+            font-size: 25px;
+            font-variant-caps: petite-caps;
+            color: #130168;
+        }
+        .container:hover .text{
+            opacity: 0;
+        }
+        .container:hover .top{
+            opacity:1;
+        }
+        .container:hover .bottom{
+            opacity:1;
+        }
+        #googleMap{
+            width:96%;
+            height:300px;
+            border: 5px solid rgb(36, 33, 33);
+            float:left;
+            padding:20px;
+            margin:30px;
+            border-radius:6px;
+        }
+        @media only screen and (max-width: 1215px){
+            .instagram, .container, .whatsapp{
+                width: 96%;
+                float:left;
+                height: 450;
+                margin: 10px 10px 10px 7px;
+            }
+            #googleMap{
+                width: 96%;
+                float:left;
+                margin: 10px 10px 10px 7px;
+            }
+            ol, ul{
+                margin: 15px;
+            }
+            ul li:nth-child(1) .text1{
+                top: 105%;
+                left: 31%;
+            }
+            ul li:nth-child(2) .text2{
+                top: 105%;
+                left: 35%;
+            }
+            ul li:nth-child(3) .text3{
+                top: 105%;
+                left: 52%;
+            }
+            .text {
+                opacity: 0;
+            }
+            .top{
+                opacity: 1;
+                top: 35%;
+            }
+            .bottom{
+                opacity: 1;
+                top: 80%;
+            }
+            ul li:nth-child(1) .text1{
+                visibility: visible;
+                opacity: 1;
+                width: 60px;
+                left: 33%;
+                top: 100%;
+            }
+            ul li:nth-child(2) .text2{
+                visibility: visible;
+                opacity: 1;
+                width: 60px;
+                left: 39%;
+                top: 100%;
+            }
+            ul li:nth-child(3) .text3{
+                visibility: visible;
+                opacity: 1;
+                width: 60px;
+                left: 68%;
+                top: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="instagram">
+        <p> for daily updates checkout our posts and stories on our instagram page.</p>
+        <div class="icons">
+            <ol>
+                <li><a target="_blank" href="https://instagram.com/chocolate_temptation_03?igshid=cvfoy5jope21" class="fab fa-instagram"></a></li>
+            </ol>
+        </div>
+    </div>
+    <div class="container">
+        <div class="text" onClick="myClick()">
+            Chocolate <br /> Temptation <br /> Home-made <br />
+        </div>
+        <div class="top">
+            <div class="address"> 505/06, Venkatesh Jyot,Balaji complex, bhayandar west,150 feet road </div>
+        </div>
+        <div class="bottom">
+            <div class="time"> Flexible Timings </div>
+        </div>
+    </div>
+    
+    <div class="whatsapp">
+        <p>For order and enquiry related click below to whatsapp us.</p>
+        <div class="icons">
+            <ul>
+                <li><a target="_blank" href="http://wa.me/919699520342" class="fab fa-whatsapp"><span class="text1"> Vidhi Vora</span></a></li> 
+                <li><a target="_blank" href="http://wa.me/917878253558" class="fab fa-whatsapp"><span class="text2"> Saloni Vora</span></a></li>
+                <li><a target="_blank" href="http://wa.me/918704375795" class="fab fa-whatsapp"><span class="text3"> Khushi Vora</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="googleMap" id="googleMap"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAjnl8S7jBlTWLDPefsbbLlv_oqY1tFmI&callback=myMap" 
+    async defer></script>
+    <script src="index.js"></script>
+
+</body>
+</html>
